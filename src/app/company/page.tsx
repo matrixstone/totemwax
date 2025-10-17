@@ -1,7 +1,11 @@
+"use client";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CompanyPage() {
+  const { t } = useLanguage();
+  
   return (
     <Container>
       <div className="py-16">

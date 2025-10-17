@@ -1,7 +1,11 @@
+"use client";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ProductPage() {
+  const { t } = useLanguage();
+  
   return (
     <Container>
       <div className="py-16">
@@ -32,7 +36,7 @@ export default function ProductPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             {/* Physical Properties */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+            {/* <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                 Physical Properties
               </h3>
@@ -62,7 +66,7 @@ export default function ProductPage() {
                   <span className="text-gray-600 dark:text-gray-400">0.01%</span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Performance Characteristics */}
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">

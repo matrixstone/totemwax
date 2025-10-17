@@ -1,8 +1,12 @@
+"use client";
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImg from "../../public/img/totem_hero.png";
 
 export const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <div 
       className="relative bg-cover bg-center bg-no-repeat py-16"
@@ -17,10 +21,10 @@ export const Hero = () => {
         <div className="flex items-center justify-center w-full lg:w-1/2">
           <div className="max-w-2xl text-center">
             <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight">
-              Qingdao Totem Wax
+              {t('hero.title')}
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-600 lg:text-xl xl:text-2xl dark:text-gray-300">
-              Premier manufacturer specializing in high-quality dental wax discs. Located in the picturesque coastal city of Qingdao, Shandong, China, our advanced production facility is dedicated to crafting superior wax products for a wide range of applications.
+              {t('hero.description')}
             </p>
 
             {/* <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">

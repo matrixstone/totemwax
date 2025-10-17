@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
@@ -24,10 +25,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class">
-          <Navbar />
-          <div>{children}</div>
-          <Footer />
-          <PopupWidget />
+          <LanguageProvider>
+            <Navbar />
+            <div>{children}</div>
+            <Footer />
+            <PopupWidget />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

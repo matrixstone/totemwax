@@ -2,8 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const ProductCards = () => {
+  const { t } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dentalWaxImages = [
     { src: "/img/dental_wax_disc_1.JPG", alt: "Blue Dental Wax Disc", label: "Blue" },
@@ -43,39 +45,39 @@ export const ProductCards = () => {
         {/* Text Content - Left Side */}
         <div className="space-y-6">
           <div>
-            <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Dental Wax Discs
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              Independently developed and produced by Qingdao Totem Candle Industry Co., Ltd. using internationally advanced formula and imported raw materials. Our machinable wax discs offer top-class quality at competitive prices.
-            </p>
+                <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                  {t('products.dental.title')}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+                  {t('products.dental.description')}
+                </p>
             
             {/* Key Features */}
             <div className="space-y-4">
               <div>
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Available Colors</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('products.dental.colors')}</h4>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Pure white (translucent), blue, ceramic white, brown, and gray options
+                  {t('products.dental.colors.desc')}
                 </p>
               </div>
               
               <div>
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Technical Specifications</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('products.dental.specs')}</h4>
                 <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
-                  <div>• Hardness: 55-60 (Shore &quot;D&quot; Scale)</div>
-                  <div>• Softening Point: 102°C</div>
-                  <div>• Drop Melting Point: 112°C</div>
-                  <div>• Density: 0.89-0.93</div>
-                  <div>• Gray: 0.01%</div>
-                  <div>• Toughness: Very Good</div>
-                  <div>• Cutability: Excellent Machinability</div>
+                  <div>• {t('products.dental.specs.hardness')}</div>
+                  <div>• {t('products.dental.specs.softening')}</div>
+                  <div>• {t('products.dental.specs.melting')}</div>
+                  <div>• {t('products.dental.specs.density')}</div>
+                  <div>• {t('products.dental.specs.gray')}</div>
+                  <div>• {t('products.dental.specs.toughness')}</div>
+                  <div>• {t('products.dental.specs.cutability')}</div>
                 </div>
               </div>
               
               <div>
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Size Options</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('products.dental.sizes')}</h4>
                 <p className="text-gray-700 dark:text-gray-300">
-                  OD: 98mm, 98.5mm, 100mm, 112mm | Thickness: 10-30mm | With step or no step options available
+                  {t('products.dental.sizes.desc')}
                 </p>
               </div>
               
@@ -162,10 +164,10 @@ export const ProductCards = () => {
         <div className="space-y-6">
           <div>
             <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Additional Wax Products
+              {t('products.additional.title')}
             </h3>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-              Household candles, craft candles, industrial machinable wax, solid lubricants, and specialized textile wax rings for various applications.
+              {t('products.additional.description')}
             </p>
           </div>
           <Link
