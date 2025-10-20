@@ -64,8 +64,7 @@ export default function Home() {
                     </svg>
                     <div>
                       <p className="text-gray-700 dark:text-gray-300 font-medium">{t('contact.address.phone')}</p>
-                      <p className="text-gray-600 dark:text-gray-400">0086-532-85141988</p>
-                      <p className="text-gray-600 dark:text-gray-400">15266210109</p>
+                      <p className="text-gray-600 dark:text-gray-400">+86-15266210109</p>
                     </div>
                   </div>
                   
@@ -75,7 +74,7 @@ export default function Home() {
                     </svg>
                     <div>
                       <p className="text-gray-700 dark:text-gray-300 font-medium">{t('contact.address.email')}</p>
-                      <p className="text-gray-600 dark:text-gray-400">totemwax@126.com</p>
+                      <p className="text-gray-600 dark:text-gray-400">totem0908@126.com</p>
                     </div>
                   </div>
                 </div>
@@ -89,7 +88,7 @@ export default function Home() {
                   {t('contact.additional.title')}
                 </h3>
                 <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
+                  {/* <div className="flex items-start space-x-3">
                     <svg className="w-6 h-6 text-indigo-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
@@ -97,7 +96,7 @@ export default function Home() {
                       <p className="text-gray-700 dark:text-gray-300 font-medium">{t('contact.additional.fax')}</p>
                       <p className="text-gray-600 dark:text-gray-400">0086-532-85141988</p>
                     </div>
-                  </div>
+                  </div> */}
                   
                   <div className="flex items-start space-x-3">
                     <svg className="w-6 h-6 text-indigo-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +141,7 @@ export default function Home() {
                   Call Now
                 </a> */}
                 <a
-                  href="mailto:totemwax@126.com"
+                  href="mailto:totem0908@126.com"
                   className="inline-block px-8 py-3 text-indigo-600 bg-white border border-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition-colors duration-200"
                 >
                   {t('contact.cta.email')}
