@@ -7,18 +7,27 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export const ProductCards = () => {
   const { t } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentResinImageIndex, setCurrentResinImageIndex] = useState(0);
+  
   const dentalWaxImages = [
     { src: "/img/dental_wax_disc_1.JPG", alt: "Blue Dental Wax Disc", label: "Blue" },
     { src: "/img/dental_wax_disc_2.JPG", alt: "White Dental Wax Disc", label: "White" },
     { src: "/img/dental_wax_disc_3.JPG", alt: "Ceramic Dental Wax Disc", label: "Ceramic" },
     { src: "/img/dental_wax_disc_4.JPG", alt: "Brown Dental Wax Disc", label: "Brown" },
     { src: "/img/dental_wax_disc_5.JPG", alt: "Gray Dental Wax Disc", label: "Gray" },
+    { src: "/img/dental_wax_disc_6.JPG", alt: "Gray Dental Wax Disc 2", label: "Gray" },
+  ];
+
+  const resinImages = [
+    { src: "/img/resin_1.jpg", alt: "PMMA Resin Disc 1", label: "Transparent" },
+    { src: "/img/resin_2.jpg", alt: "PMMA Resin Disc 2", label: "VITA Colors" },
+    { src: "/img/resin_3.jpg", alt: "PMMA Resin Disc 3", label: "Dual Color" },
   ];
 
   // Auto-play functionality
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === dentalWaxImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 3000); // Change image every 3 seconds
@@ -26,15 +35,38 @@ export const ProductCards = () => {
     return () => clearInterval(interval);
   }, [dentalWaxImages.length]);
 
+  // Auto-play functionality for resin images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentResinImageIndex((prevIndex) =>
+        prevIndex === resinImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [resinImages.length]);
+
   const goToPrevious = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? dentalWaxImages.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === dentalWaxImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToPreviousResin = () => {
+    setCurrentResinImageIndex((prevIndex) =>
+      prevIndex === 0 ? resinImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextResin = () => {
+    setCurrentResinImageIndex((prevIndex) =>
+      prevIndex === resinImages.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -71,7 +103,15 @@ export const ProductCards = () => {
                   <div>• {t('products.dental.specs.gray')}</div>
                   <div>• {t('products.dental.specs.toughness')}</div>
                   <div>• {t('products.dental.specs.cutability')}</div>
+                  <div>• {t('products.dental.specs.shrinkage')}</div>
                 </div>
+              </div>
+              
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('products.dental.applications')}</h4>
+                <p className="text-gray-700 dark:text-gray-300">
+                  {t('products.dental.applications.desc')}
+                </p>
               </div>
               
               <div>
@@ -104,7 +144,7 @@ export const ProductCards = () => {
             <div className="relative w-96 h-96 flex items-center justify-center">
               {/* Main Image */}
               <div className="bg-white rounded-lg p-6">
-                <div className="w-72 h-72 relative mb-4">
+                <div className="w-80 h-80 relative mb-4">
                   <Image
                     src={dentalWaxImages[currentImageIndex].src}
                     alt={dentalWaxImages[currentImageIndex].alt}
@@ -166,9 +206,43 @@ export const ProductCards = () => {
             <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {t('products.additional.title')}
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
               {t('products.additional.description')}
             </p>
+
+            {/* Technical Specifications */}
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('products.additional.specs')}</h4>
+                <div className="grid grid-cols-1 gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <div>• {t('products.additional.specs.composition')}</div>
+                  <div>• {t('products.additional.specs.colors')}</div>
+                  <div>• {t('products.additional.specs.hardness')}</div>
+                  <div>• {t('products.additional.specs.density')}</div>
+                  <div>• {t('products.additional.specs.tensile')}</div>
+                  <div>• {t('products.additional.specs.flexural')}</div>
+                  <div>• {t('products.additional.specs.modulus')}</div>
+                  <div>• {t('products.additional.specs.toughness')}</div>
+                  <div>• {t('products.additional.specs.machinability')}</div>
+                  <div>• {t('products.additional.specs.ash')}</div>
+                  <div>• {t('products.additional.specs.shrinkage')}</div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('products.dental.sizes')}</h4>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
+                  {t('products.additional.specs.sizes')}
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('products.additional.applications')}</h4>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
+                  {t('products.additional.applications.desc')}
+                </p>
+              </div>
+            </div>
           </div>
           <Link
             href="/company"
@@ -178,38 +252,81 @@ export const ProductCards = () => {
           </Link>
         </div>
         
+
+
+            {/* Product Images - Right Side */}
+            {/* <div className="flex justify-center">
+          <div className="relative p-8 from-teal-50 to-teal-100 dark:from-teal-900 dark:to-teal-800 rounded-2xl">
+            <div className="relative w-96 h-96 flex items-center justify-center">
+              <div className="bg-white rounded-lg p-6">
+                <div className="w-72 h-72 relative mb-4">
+                  <Image
+                    src={dentalWaxImages[currentImageIndex].src}
+                    alt={dentalWaxImages[currentImageIndex].alt}
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </div>
+                <p className="text-xl text-gray-600 text-center font-medium">
+ */}
+
+
         {/* Product Images - Right Side */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-3 gap-4 p-8 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-2xl">
-            {/* Candle Images */}
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <div className="w-12 h-16 bg-orange-200 rounded-t-lg mb-2"></div>
-              <p className="text-xs text-gray-600 text-center font-medium">Candle</p>
+          <div className="relative p-8 from-teal-50 to-teal-100 dark:from-teal-900 dark:to-teal-800 rounded-2xl">
+            {/* Carousel Container */}
+            <div className="relative w-96 h-96 flex items-center justify-center">
+              {/* Main Image */}
+              <div className="bg-white rounded-lg p-6">
+                <div className="w-80 h-80 relative mb-4">
+                  <Image
+                    src={resinImages[currentResinImageIndex].src}
+                    alt={resinImages[currentResinImageIndex].alt}
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </div>
+                <p className="text-xl text-gray-600 text-center font-medium">
+                  {resinImages[currentResinImageIndex].label} Resin Disc
+                </p>
+              </div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={goToPreviousResin}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10"
+                aria-label="Previous resin image"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <button
+                onClick={goToNextResin}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10"
+                aria-label="Next resin image"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
-            
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <div className="w-8 h-10 bg-yellow-200 rounded-t-lg mb-2"></div>
-              <p className="text-xs text-gray-600 text-center font-medium">Tealight</p>
-            </div>
-            
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <div className="w-12 h-8 bg-gray-200 rounded mb-2"></div>
-              <p className="text-xs text-gray-600 text-center font-medium">Wax Ring</p>
-            </div>
-            
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <div className="w-10 h-10 bg-blue-200 rounded mb-2"></div>
-              <p className="text-xs text-gray-600 text-center font-medium">Lubricant</p>
-            </div>
-            
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <div className="w-8 h-12 bg-green-200 rounded-t-lg mb-2"></div>
-              <p className="text-xs text-gray-600 text-center font-medium">Craft</p>
-            </div>
-            
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <div className="w-10 h-8 bg-purple-200 rounded mb-2"></div>
-              <p className="text-xs text-gray-600 text-center font-medium">Industrial</p>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center space-x-2 mt-6">
+              {resinImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentResinImageIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                    index === currentResinImageIndex
+                      ? 'bg-indigo-600 scale-125'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to resin image ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>

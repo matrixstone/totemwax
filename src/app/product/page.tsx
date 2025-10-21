@@ -83,8 +83,16 @@ export default function ProductPage() {
                   <span className="text-gray-600 dark:text-gray-400">Excellent Machinability</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                  <span className="font-medium text-gray-700 dark:text-gray-300">Shrinkage Rate</span>
+                  <span className="text-gray-600 dark:text-gray-400">5%</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                  <span className="font-medium text-gray-700 dark:text-gray-300">Applications</span>
+                  <span className="text-gray-600 dark:text-gray-400">{t('products.dental.applications.desc')}</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
                   <span className="font-medium text-gray-700 dark:text-gray-300">Size Options</span>
-                  <span className="text-gray-600 dark:text-gray-400">OD 98, 98.5, 100, 112mm</span>
+                  <span className="text-gray-600 dark:text-gray-400">OD 98mm, 98.5mm, 100mm, 112mm, 150mm</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
                   <span className="font-medium text-gray-700 dark:text-gray-300">Thickness</span>
