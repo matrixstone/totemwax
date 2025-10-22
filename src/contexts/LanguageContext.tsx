@@ -70,6 +70,14 @@ const translations = {
     'products.additional.applications': 'Applications',
     'products.additional.applications.desc': 'Dental CAD/CAM system specialized resin discs, crown and bridge molds, base plate restorations, temporary crowns, diagnostic wax patterns',
     
+    // Image Labels
+    'images.dental.blue': 'Blue Wax Disc',
+    'images.dental.blue_white_gray': 'Blue, White and Gray Wax Disc',
+    'images.dental.gray': 'Gray Wax Disc',
+    'images.resin.transparent': 'Transparent Resin Disc',
+    'images.resin.vita_colors': 'VITA Colors Resin Disc',
+    'images.resin.pink': 'Pink Color Resin Disc',
+    
     // Contact Section
     'contact.title': 'Contact Us',
     'contact.description': 'Ready to discuss your wax product needs? Get in touch with our team for quotes, custom orders, and technical support.',
@@ -134,6 +142,14 @@ const translations = {
     'products.additional.specs.sizes': '规格：直径98、98.5mm，厚度10-25mm；带台阶；直径98、98.5mm，厚度10-25mm；不带台阶；可依客户需要订制规格',
     'products.additional.applications': '应用',
     'products.additional.applications.desc': '齿科CAD/CAM系统专用树脂盘、型模齿冠桥、基托修复体、临时冠、诊断用蜡型',
+    
+    // Image Labels
+    'images.dental.blue': '蓝色蜡盘',
+    'images.dental.blue_white_gray': '蓝色、白色和灰色蜡盘',
+    'images.dental.gray': '灰色蜡盘',
+    'images.resin.transparent': '透明树脂盘',
+    'images.resin.vita_colors': 'VITA色系树脂盘',
+    'images.resin.pink': '粉色树脂盘',
     
     // Contact Section
     'contact.title': '联系我们',

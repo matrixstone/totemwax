@@ -10,18 +10,18 @@ export const ProductCards = () => {
   const [currentResinImageIndex, setCurrentResinImageIndex] = useState(0);
   
   const dentalWaxImages = [
-    { src: "/img/dental_wax_disc_1.JPG", alt: "Blue Dental Wax Disc", label: "Blue" },
-    { src: "/img/dental_wax_disc_2.JPG", alt: "White Dental Wax Disc", label: "White" },
-    { src: "/img/dental_wax_disc_3.JPG", alt: "Ceramic Dental Wax Disc", label: "Ceramic" },
-    { src: "/img/dental_wax_disc_4.JPG", alt: "Brown Dental Wax Disc", label: "Brown" },
-    { src: "/img/dental_wax_disc_5.JPG", alt: "Gray Dental Wax Disc", label: "Gray" },
-    { src: "/img/dental_wax_disc_6.JPG", alt: "Gray Dental Wax Disc 2", label: "Gray" },
+    { src: "/img/dental_wax_disc_1.JPG", alt: "Blue Dental Wax Disc", labelKey: "images.dental.blue" },
+    { src: "/img/dental_wax_disc_2.JPG", alt: "Blue Dental Wax Disc", labelKey: "images.dental.blue" },
+    { src: "/img/dental_wax_disc_3.JPG", alt: "Blue, White and Gray Dental Wax Disc", labelKey: "images.dental.blue_white_gray" },
+    { src: "/img/dental_wax_disc_4.JPG", alt: "Blue, White and Gray Dental Wax Disc", labelKey: "images.dental.blue_white_gray" },
+    { src: "/img/dental_wax_disc_5.JPG", alt: "Blue, White and Gray Dental Wax Disc", labelKey: "images.dental.blue_white_gray" },
+    { src: "/img/dental_wax_disc_6.JPG", alt: "Gray Dental Wax Disc", labelKey: "images.dental.gray" },
   ];
 
   const resinImages = [
-    { src: "/img/resin_1.jpg", alt: "PMMA Resin Disc 1", label: "Transparent" },
-    { src: "/img/resin_2.jpg", alt: "PMMA Resin Disc 2", label: "VITA Colors" },
-    { src: "/img/resin_3.jpg", alt: "PMMA Resin Disc 3", label: "Dual Color" },
+    { src: "/img/resin_1.jpg", alt: "PMMA Resin Disc 1", labelKey: "images.resin.transparent" },
+    { src: "/img/resin_2.jpg", alt: "PMMA Resin Disc 2", labelKey: "images.resin.vita_colors" },
+    { src: "/img/resin_3.jpg", alt: "PMMA Resin Disc 3", labelKey: "images.resin.pink" },
   ];
 
   // Auto-play functionality
@@ -153,7 +153,7 @@ export const ProductCards = () => {
                   />
                 </div>
                 <p className="text-xl text-gray-600 text-center font-medium">
-                  {dentalWaxImages[currentImageIndex].label} Wax Disc
+                  {t(dentalWaxImages[currentImageIndex].labelKey)}
                 </p>
               </div>
 
@@ -251,25 +251,6 @@ export const ProductCards = () => {
             Learn more
           </Link>
         </div>
-        
-
-
-            {/* Product Images - Right Side */}
-            {/* <div className="flex justify-center">
-          <div className="relative p-8 from-teal-50 to-teal-100 dark:from-teal-900 dark:to-teal-800 rounded-2xl">
-            <div className="relative w-96 h-96 flex items-center justify-center">
-              <div className="bg-white rounded-lg p-6">
-                <div className="w-72 h-72 relative mb-4">
-                  <Image
-                    src={dentalWaxImages[currentImageIndex].src}
-                    alt={dentalWaxImages[currentImageIndex].alt}
-                    fill
-                    className="object-cover rounded-lg"
-                  />
-                </div>
-                <p className="text-xl text-gray-600 text-center font-medium">
- */}
-
 
         {/* Product Images - Right Side */}
         <div className="flex justify-center">
@@ -287,7 +268,7 @@ export const ProductCards = () => {
                   />
                 </div>
                 <p className="text-xl text-gray-600 text-center font-medium">
-                  {resinImages[currentResinImageIndex].label} Resin Disc
+                  {t(resinImages[currentResinImageIndex].labelKey)}
                 </p>
               </div>
 
