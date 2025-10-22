@@ -1,16 +1,19 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Footer() {
+  const { t } = useLanguage();
   const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative">
       <Container>
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
-          <div className="lg:col-span-2">
+          {/* <div className="lg:col-span-2">
             <div>
               {" "}
               <Link
@@ -19,19 +22,17 @@ export function Footer() {
               >
                 <Image
                   src="/img/logo.svg"
-                  alt="N"
+                  alt="Qingdao Totem Wax Logo"
                   width="32"
                   height="32"
                   className="w-8"
                 />
-                <span>Nextly</span>
+                <span>Qingdao Totem Wax</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              Qingdao Totem Candle Industry Co., Ltd. is a distinguished manufacturer specializing in premium wax products, including dental CAD/CAM system specialized carving wax discs and PMMA resin discs.
             </div>
 
             <div className="mt-5">
@@ -49,9 +50,9 @@ export function Footer() {
                 />
               </a>
             </div>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
                 <Link
@@ -63,8 +64,8 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
                 <Link
@@ -76,8 +77,8 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-          </div>
-          <div className="">
+          </div> */}
+          {/* <div className="">
             <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
@@ -109,18 +110,11 @@ export function Footer() {
                 <Linkedin />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="https://web3templates.com/" target="_blank" rel="noopener">
-            Web3Templates.
-          </a>{" "}
-          Illustrations from{" "}
-          <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
-            Glazestock
-          </a>
+          {t('footer.copyright')}
         </div>
       </Container>
       {/* Do not remove this */}

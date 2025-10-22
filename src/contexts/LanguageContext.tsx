@@ -93,6 +93,9 @@ const translations = {
     'contact.cta.title': 'Ready to Get Started?',
     'contact.cta.description': 'Contact us today for quotes, custom orders, or technical support. Our team is ready to help with your wax product needs.',
     'contact.cta.email': 'Send Email',
+    
+    // Footer
+    'footer.copyright': 'Copyright © 2010 Qingdao Totem Candle Industry Co, Ltd. All Rights Reserved',
   },
   zh: {
     // Navigation
@@ -166,6 +169,9 @@ const translations = {
     'contact.cta.title': '准备开始了吗？',
     'contact.cta.description': '今天就联系我们获取报价、定制订单或技术支持。我们的团队随时准备帮助您解决蜡制品需求。',
     'contact.cta.email': '发送邮件',
+    
+    // Footer
+    'footer.copyright': '版权所有 © 2010 青岛同泰蜡业有限公司 保留所有权利',
   }
 };
 
