@@ -77,7 +77,8 @@ export const Navbar = () => {
                     {navigation.map((item, index) => (
                       <Link key={index} href={
                         item === t('nav.company') ? "/company" : 
-                        item === t('nav.products') ? "/#products" : 
+                        // item === t('nav.products') ? "/#products" : 
+                        item === t('nav.products') ? "/product" : 
                         item === t('nav.contact') ? "/#contact" : 
                         "/"
                       } className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
@@ -100,7 +101,8 @@ export const Navbar = () => {
               <li className="mr-3 nav__item" key={index}>
                 <Link href={
                   menu === t('nav.company') ? "/company" : 
-                  menu === t('nav.products') ? "/#products" : 
+                  // menu === t('nav.products') ? "/#products" : 
+                  menu === t('nav.products') ? "/product" : 
                   menu === t('nav.contact') ? "/#contact" : 
                   "/"
                 } className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
