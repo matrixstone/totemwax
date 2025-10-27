@@ -102,6 +102,100 @@ export const products: Product[] = [
     ]
   },
   {
+    id: 'resin-disc',
+    name: 'PMMA Resin Disc for Dental CAD/CAM Systems',
+    nameZh: '牙科CAD/CAM系统专用PMMA树脂盘',
+    category: 'Dental Products',
+    categoryZh: '齿科产品',
+    description: 'High-quality PMMA resin discs designed for dental CAD/CAM systems, offering excellent machinability and precision for crown and bridge work.',
+    descriptionZh: '专为牙科CAD/CAM系统设计的高品质PMMA树脂盘，提供优异的机械加工性和精度，适用于齿冠和桥体制作。',
+    images: [
+      '/img/resin_1.jpg',
+      '/img/resin_2.jpg',
+      '/img/resin_3.jpg'
+    ],
+    specifications: [
+      { 
+        label: 'Composition', 
+        value: '100% PMMA',
+        labelZh: '成分',
+        valueZh: '100%PMMA'
+      },
+      { 
+        label: 'Colors', 
+        value: 'Transparent, VITA full color range, pink; dual-color',
+        labelZh: '颜色',
+        valueZh: '透明，VITA全色系，粉红色；双色'
+      },
+      { 
+        label: 'Hardness', 
+        value: 'Shore "D" Scale: 75-85',
+        labelZh: '硬度',
+        valueZh: '邵氏D75-85度'
+      },
+      { 
+        label: 'Density', 
+        value: '1.19',
+        labelZh: '密度',
+        valueZh: '1.19'
+      },
+      { 
+        label: 'Tensile Strength', 
+        value: '>75 MPa',
+        labelZh: '抗张强度',
+        valueZh: '>75Mpa'
+      },
+      { 
+        label: 'Flexural Strength', 
+        value: '>125 MPa',
+        labelZh: '弯曲强度',
+        valueZh: '>125Mpa'
+      },
+      { 
+        label: 'Elastic Modulus', 
+        value: '3300 MPa',
+        labelZh: '弹性模量',
+        valueZh: '3300Mpa'
+      },
+      { 
+        label: 'Toughness', 
+        value: 'Good',
+        labelZh: '韧性',
+        valueZh: '好'
+      },
+      { 
+        label: 'Machinability', 
+        value: 'Excellent',
+        labelZh: '可切削性',
+        valueZh: '极佳'
+      },
+      { 
+        label: 'Ash Content', 
+        value: '<0.29%',
+        labelZh: '灰分',
+        valueZh: '<0.29%'
+      },
+      { 
+        label: 'Shrinkage Rate', 
+        value: '<0.5%',
+        labelZh: '收缩率',
+        valueZh: '<0.5%'
+      },
+      { 
+        label: 'Specifications', 
+        value: 'Diameter 98mm, 98.5mm, thickness 10-25mm; with step; Diameter 98mm, 98.5mm, thickness 10-25mm; without step; Custom specifications available upon request',
+        labelZh: '规格',
+        valueZh: '直径98、98.5mm，厚度10-25mm；带台阶；直径98、98.5mm，厚度10-25mm；不带台阶；可依客户需要订制规格'
+      },
+      { 
+        label: 'Applications', 
+        value: 'Dental CAD/CAM system specialized resin discs, crown and bridge molds, base plate restorations, temporary crowns, diagnostic wax patterns',
+        labelZh: '应用',
+        valueZh: '齿科CAD/CAM系统专用树脂盘、型模齿冠桥、基托修复体、临时冠、诊断用蜡型'
+      }
+    ]
+  },
+  {
     id: 'white-candle',
     name: 'White Candle',
     nameZh: '普通照明蜡烛',
