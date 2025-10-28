@@ -209,12 +209,12 @@ export const products: Product[] = [
       '/img/white_candle_3.jpg'
     ],
     specifications: [
-      { label: 'Product Name', value: 'White candle' },
-      { label: 'Art No.', value: '8", 23g' },
-      { label: 'Qty/Bag (PCS)', value: '8' },
-      { label: 'Qty/Ctn( Bag )', value: '65' },
-      { label: 'NW( Kgs )', value: '11.96' },
-      { label: 'Qty/20FCL ( CTN )', value: '1560' }
+      { label: 'Product Name', value: 'White candle', labelZh: '产品名称', valueZh: '白蜡烛' },
+      { label: 'Art No.', value: '8", 23g', labelZh: '货号', valueZh: '8英寸, 23g' },
+      { label: 'Qty/Bag (PCS)', value: '8', labelZh: '每包数量', valueZh: '8' },
+      { label: 'Qty/Ctn( Bag )', value: '65', labelZh: '每箱数量（包）', valueZh: '65' },
+      { label: 'NW( Kgs )', value: '11.96', labelZh: '净重（公斤）', valueZh: '11.96' },
+      { label: 'Qty/20FCL ( CTN )', value: '1560', labelZh: '每20英尺集装箱数量（箱）', valueZh: '1560' }
     ]
   },
   {
@@ -231,10 +231,10 @@ export const products: Product[] = [
       '/img/tea_3.jpg'
     ],
     specifications: [
-      { label: 'Product Name', value: 'TeaLight Candle' },
-      { label: 'Art No.', value: '10×23 G / 3.8 x 1.1"2.4cm' },
-      { label: 'Qty/Bag (PCS)', value: '50' },
-      { label: 'Qty/Ctn ( Bag )', value: '20' }
+      { label: 'Product Name', value: 'TeaLight Candle', labelZh: '产品名称', valueZh: '茶蜡烛' },
+      { label: 'Art No.', value: '10×23 G / 3.8 x 1.1"2.4cm', labelZh: '货号', valueZh: '10×23 G / 3.8 x 1.1"2.4cm' },
+      { label: 'Qty/Bag (PCS)', value: '50', labelZh: '每包数量', valueZh: '50' },
+      { label: 'Qty/Ctn ( Bag )', value: '20', labelZh: '每箱数量（包）', valueZh: '20' }
     ]
   },
   {
@@ -251,9 +251,9 @@ export const products: Product[] = [
       '/img/floating_3.jpg'
     ],
     specifications: [
-      { label: 'Product Name', value: 'Floating Candle' },
-      { label: 'Art No.', value: 'Dia4.5x H2.7cm / Dia5 x H3cm' },
-      { label: 'Qty/Bag (PCS)', value: '12' }
+      { label: 'Product Name', value: 'Floating Candle', labelZh: '产品名称', valueZh: '浮蜡烛' },
+      { label: 'Art No.', value: 'Dia4.5x H2.7cm / Dia5 x H3cm', labelZh: '货号', valueZh: '直径4.5 x 高2.7cm / 直径5 x 高3cm' },
+      { label: 'Qty/Bag (PCS)', value: '12', labelZh: '每包数量', valueZh: '12' }
     ]
   },
   {

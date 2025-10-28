@@ -84,7 +84,23 @@ export default function ProductPage() {
           <div className="flex-1 min-w-0">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
 
-              {/* Product Images */}
+              {/* Product Information */}
+              <div className="p-8">
+                <div className="mb-6">
+                  <span className="inline-block px-3 py-1 text-sm font-semibold text-indigo-600 bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full uppercase tracking-wide">
+                    {language === 'en' ? selectedProduct.category : selectedProduct.categoryZh}
+                  </span>
+                </div>
+
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  {language === 'en' ? selectedProduct.name : selectedProduct.nameZh}
+                </h2>
+
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                  {language === 'en' ? selectedProduct.description : selectedProduct.descriptionZh}
+                </p>
+
+                              {/* Product Images */}
               {selectedProduct.images && selectedProduct.images.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
@@ -106,22 +122,6 @@ export default function ProductPage() {
                   </div>
                 </div>
               )}
-
-              {/* Product Information */}
-              <div className="p-8">
-                <div className="mb-6">
-                  <span className="inline-block px-3 py-1 text-sm font-semibold text-indigo-600 bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full uppercase tracking-wide">
-                    {language === 'en' ? selectedProduct.category : selectedProduct.categoryZh}
-                  </span>
-                </div>
-
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  {language === 'en' ? selectedProduct.name : selectedProduct.nameZh}
-                </h2>
-
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                  {language === 'en' ? selectedProduct.description : selectedProduct.descriptionZh}
-                </p>
 
                 {/* Product Specifications */}
                 {selectedProduct.specifications && selectedProduct.specifications.length > 0 && (

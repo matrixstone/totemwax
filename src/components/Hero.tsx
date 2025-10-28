@@ -1,11 +1,49 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImg from "../../public/img/totem_hero.png";
+
+// Hero images array - add your images here
+const heroImages = [
+  { src: '/img/totem_hero.png', alt: 'Qingdao Totem Candle Industry - Professional Wax Manufacturing' },
+  { src: '/img/resin_1.jpg', alt: 'PMMA product' },
+  { src: '/img/resin_3.jpg', alt: 'PMMA product 2' },
+  { src: '/img/dental_wax_disc_5.JPG', alt: 'Dental Wax Discs' },
+  { src: '/img/white_candle_1.jpg', alt: 'white_candle_1' },
+  { src: '/img/white_candle_1.jpg', alt: 'white_candle_1' },
+  // Add more hero images here as needed
+];
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Auto-play carousel
+  useEffect(() => {
+    if (heroImages.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? heroImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
   
   return (
     <div 
@@ -53,16 +91,62 @@ export const Hero = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="relative">
-            <Image
-              src={heroImg}
-              width="616"
-              height="617"
-              className="object-cover rounded-lg shadow-2xl"
-              alt="Qingdao Totem Candle Industry - Professional Wax Manufacturing"
-              loading="eager"
-              placeholder="blur"
-            />
+          <div className="relative w-full max-w-lg">
+            {/* Carousel Image */}
+            <div className="relative overflow-hidden rounded-lg shadow-2xl">
+              <Image
+                src={heroImages[currentImageIndex].src}
+                width="616"
+                height="617"
+                className="object-cover transition-opacity duration-500"
+                alt={heroImages[currentImageIndex].alt}
+                loading="eager"
+                priority
+              />
+              
+              {/* Navigation Arrows - Only show if more than one image */}
+              {heroImages.length > 1 && (
+                <>
+                  <button
+                    onClick={goToPrevious}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-700 hover:text-gray-900 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                    aria-label="Previous image"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
+                  <button
+                    onClick={goToNext}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-700 hover:text-gray-900 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                    aria-label="Next image"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* Dots Indicator - Only show if more than one image */}
+            {heroImages.length > 1 && (
+              <div className="flex justify-center mt-4 space-x-2">
+                {heroImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                      index === currentImageIndex
+                        ? 'bg-indigo-600 scale-110 shadow-lg'
+                        : 'hover:bg-white border-2 border-gray-400'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </Container>
