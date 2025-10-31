@@ -2,6 +2,7 @@
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ProductCards } from "@/components/ProductCards";
 
 export default function CompanyPage() {
   const { t } = useLanguage();
@@ -12,95 +13,74 @@ export default function CompanyPage() {
         {/* Company Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Qingdao Totem Candle Industry Co., Ltd.
+            {t('company.title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
-            A distinguished manufacturer specializing in premium wax products, headquartered in the picturesque coastal city of Qingdao, Shandong, China.
+            {t('company.subtitle')}
           </p>
         </div>
 
         {/* Company Overview */}
         <SectionTitle
-          preTitle="About Us"
-          title="Excellence in Wax Manufacturing"
+          preTitle={t('company.about.pretitle')}
+          title={t('company.about.title')}
         >
-          Strategically located just 78 kilometers from Qingdao Port, our state-of-the-art facility spans 3,000 square meters and is equipped with advanced production capabilities. Supported by a team of skilled technicians, dedicated production staff, and an exceptional management team, we uphold stringent quality control standards to ensure timely deliveries and competitive pricing, consistently delivering unparalleled service to our valued clients.
+          {t('company.about.description')}
         </SectionTitle>
 
         {/* Core Offerings */}
-        <div className="mb-16">
-          <SectionTitle
-            preTitle="Our Products"
-            title="Our Core Offerings"
-          >
-            As the leading manufacturer of dental wax discs in China, we take pride in producing high-quality dental wax discs available in five distinct colors—blue, white, brown, gray, and porcelain white—and a range of sizes tailored to international standards.
-          </SectionTitle>
+        <SectionTitle
+          // preTitle="Our Products"
+          title={t('products.title')}
+        >
+          {t('products.description')}
+        </SectionTitle>
+        <ProductCards />
 
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            {/* Dental Wax Discs */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Dental Wax Discs
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Our flagship product - high-quality dental wax discs available in five distinct colors:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-                <li>Blue</li>
-                <li>White</li>
-                <li>Brown</li>
-                <li>Gray</li>
-                <li>Porcelain white</li>
-              </ul>
-              <p className="text-gray-600 dark:text-gray-300 mt-4">
-                Available in a range of sizes tailored to international standards.
-              </p>
-            </div>
-
-            {/* Additional Products */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Additional Products
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Our extensive portfolio includes:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-                <li>White candles, household candles, pillar candles</li>
-                <li>Tealight candles and floating candles</li>
-                <li>Artisanal craft candles</li>
-                <li>Citronella oil candles and mosquito-repellent fragrance candles</li>
-                <li>Industrial-grade machinable wax for specialized lathe applications</li>
-                <li>Solid lubricants, including stick wax for cutting aluminum and non-ferrous metals</li>
-                <li>Wax discs for dentistry CAD/CAM systems</li>
-                <li>Textile wax rings</li>
-              </ul>
-            </div>
+        {/* Additional Products */}
+        <div className="max-w-6xl mx-auto mt-16">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              {t('company.products.additional.title')}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              {t('company.products.additional.description')}
+            </p>
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+              <li>{t('company.products.additional.list1')}</li>
+              <li>{t('company.products.additional.list2')}</li>
+              <li>{t('company.products.additional.list3')}</li>
+              <li>{t('company.products.additional.list4')}</li>
+              <li>{t('company.products.additional.list5')}</li>
+              <li>{t('company.products.additional.list6')}</li>
+              <li>{t('company.products.additional.list7')}</li>
+              <li>{t('company.products.additional.list8')}</li>
+            </ul>
           </div>
         </div>
 
         {/* Global Reach */}
         <SectionTitle
-          preTitle="Global Presence"
-          title="Global Reach and Trusted Partnerships"
+          preTitle={t('company.global.pretitle')}
+          title={t('company.global.title')}
         >
-          For years, Qingdao Totem Candle Industry has proudly served clients worldwide, fostering enduring business relationships with domestic and international enterprises. Our commitment to excellence has earned us consistent praise and trust from customers across the globe.
+          {t('company.global.description')}
         </SectionTitle>
 
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-indigo-50 dark:bg-gray-800 p-8 rounded-lg">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Discover Our Quality and Craftsmanship
+              {t('company.cta.title')}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Visit our website for more information about our products and services.
+              {t('company.cta.description')}
             </p>
             <a
-              href="#"
+              href="/#contact"
               className="inline-block px-8 py-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors duration-200"
             >
-              Contact Us
+              {t('company.cta.button')}
             </a>
           </div>
         </div>

@@ -35,6 +35,7 @@ const translations = {
     // Products Section
     'products.title': 'Top Selling Products',
     'products.description': 'Discover our premium wax products designed for dental professionals and industrial applications worldwide.',
+    'products.learnMore': 'Check All Products',
     'products.dental.title': 'Dental Wax Discs',
     'products.dental.description': 'Independently developed and produced by Qingdao Totem Candle Industry Co., Ltd. using internationally advanced formula and imported raw materials. Our machinable wax discs offer top-class quality at competitive prices.',
     'products.dental.colors': 'Available Colors',
@@ -96,6 +97,36 @@ const translations = {
     
     // Footer
     'footer.copyright': 'Copyright © 2010 Qingdao Totem Candle Industry Co, Ltd. All Rights Reserved',
+    
+    // Company Page
+    'company.title': 'Qingdao Totem Candle Industry Co., Ltd.',
+    'company.subtitle': 'A distinguished manufacturer specializing in premium wax products, headquartered in the picturesque coastal city of Qingdao, Shandong, China.',
+    'company.about.pretitle': 'About Us',
+    'company.about.title': 'Excellence in Wax Manufacturing',
+    'company.about.description': 'Strategically located just 78 kilometers from Qingdao Port, our state-of-the-art facility spans 3,000 square meters and is equipped with advanced production capabilities. Supported by a team of skilled technicians, dedicated production staff, and an exceptional management team, we uphold stringent quality control standards to ensure timely deliveries and competitive pricing, consistently delivering unparalleled service to our valued clients.',
+    'company.products.pretitle': 'Our Products',
+    'company.products.title': 'Our Core Offerings',
+    'company.products.description': 'As the leading manufacturer of dental wax discs in China, we take pride in producing high-quality dental wax discs available in five distinct colors—blue, white, brown, gray, and porcelain white—and a range of sizes tailored to international standards.',
+    'company.products.dental.title': 'Dental Wax Discs',
+    'company.products.dental.description': 'Our flagship product - high-quality dental wax discs available in five distinct colors:',
+    'company.products.dental.colors': 'Blue, White, Brown, Gray, Porcelain white',
+    'company.products.dental.sizes': 'Available in a range of sizes tailored to international standards.',
+    'company.products.additional.title': 'Additional Products',
+    'company.products.additional.description': 'Our extensive portfolio includes:',
+    'company.products.additional.list1': 'White candles, household candles, pillar candles',
+    'company.products.additional.list2': 'Tealight candles and floating candles',
+    'company.products.additional.list3': 'Artisanal craft candles',
+    'company.products.additional.list4': 'Citronella oil candles and mosquito-repellent fragrance candles',
+    'company.products.additional.list5': 'Industrial-grade machinable wax for specialized lathe applications',
+    'company.products.additional.list6': 'Solid lubricants, including stick wax for cutting aluminum and non-ferrous metals',
+    'company.products.additional.list7': 'Wax discs for dentistry CAD/CAM systems',
+    'company.products.additional.list8': 'Textile wax rings',
+    'company.global.pretitle': 'Global Presence',
+    'company.global.title': 'Global Reach and Trusted Partnerships',
+    'company.global.description': 'For years, Qingdao Totem Candle Industry has proudly served clients worldwide, fostering enduring business relationships with domestic and international enterprises. Our commitment to excellence has earned us consistent praise and trust from customers across the globe.',
+    'company.cta.title': 'Discover Our Quality and Craftsmanship',
+    'company.cta.description': 'Visit our website for more information about our products and services.',
+    'company.cta.button': 'Contact Us',
   },
   zh: {
     // Navigation
@@ -111,6 +142,7 @@ const translations = {
     // Products Section
     'products.title': '热销产品',
     'products.description': ' ',
+    'products.learnMore': '了解全部产品',
     'products.dental.title': '牙科CAD/CAM系统专用高硬度雕刻蜡盘蜡块',
     'products.dental.description': '青岛同泰蜡业有限公司采用先进配方和进口原材料自主研发生产的牙科CAD/CAM系统专用高硬度雕刻蜡盘,及齿科专业高硬度雕刻蜡块，品质一流，较进口产品可大幅降低成本。',
     'products.dental.colors': '可选颜色',
@@ -172,6 +204,36 @@ const translations = {
     
     // Footer
     'footer.copyright': '版权所有 © 2010 青岛同泰蜡业有限公司 保留所有权利',
+    
+    // Company Page
+    'company.title': '青岛同泰蜡业有限公司',
+    'company.subtitle': '青岛同泰蜡业有限公司是一家专业从事优质蜡制品生产的知名企业，总部位于中国山东省风景秀丽的沿海城市青岛。',
+    'company.about.pretitle': '关于我们',
+    'company.about.title': '卓越的蜡制品制造',
+    'company.about.description': '我们的工厂距离青岛港仅78公里，拥有占地3000平方米的现代化生产车间，配备先进的生产设备。我们汇聚了一支由技术精湛的专业人员、熟练的生产工人和卓越的管理团队组成的精英队伍，秉承严格的质量控制体系，确保准时交货和具有竞争力的价格，为客户提供卓越的服务体验。',
+    'company.products.pretitle': '我们的产品',
+    'company.products.title': '核心产品',
+    'company.products.description': '作为中国牙科蜡盘领域的领先制造商，我们专注于生产高品质的牙科蜡盘，提供蓝色、白色、棕色、灰色和瓷白色五种颜色，以及符合国际标准的多种规格尺寸。',
+    'company.products.dental.title': '牙科蜡盘',
+    'company.products.dental.description': '我们的旗舰产品 - 高品质牙科蜡盘，提供五种颜色：',
+    'company.products.dental.colors': '蓝色、白色、棕色、灰色、瓷白色',
+    'company.products.dental.sizes': '提供符合国际标准的多种规格尺寸。',
+    'company.products.additional.title': '其他产品',
+    'company.products.additional.description': '我们还提供多样化的蜡制品系列，包括：',
+    'company.products.additional.list1': '白色蜡烛、家居蜡烛、柱状蜡烛',
+    'company.products.additional.list2': '茶蜡和漂浮蜡烛',
+    'company.products.additional.list3': '手工工艺蜡烛',
+    'company.products.additional.list4': '香茅油蜡烛和驱蚊香氛蜡烛',
+    'company.products.additional.list5': '工业专用车床用可加工蜡',
+    'company.products.additional.list6': '固体润滑剂，包括用于切割铝材和有色金属的棒状蜡',
+    'company.products.additional.list7': '牙科CAD/CAM系统用蜡盘',
+    'company.products.additional.list8': '纺织蜡环',
+    'company.global.pretitle': '全球影响力',
+    'company.global.title': '全球影响与信赖合作',
+    'company.global.description': '多年来，青岛同泰蜡业有限公司的产品远销全球，与国内外企业建立了稳固的长期合作关系，赢得了客户的高度评价和信赖。',
+    'company.cta.title': '体验卓越品质与精湛工艺',
+    'company.cta.description': '访问我们的网站，了解更多关于我们产品与服务的信息。',
+    'company.cta.button': '联系我们',
   }
 };
 

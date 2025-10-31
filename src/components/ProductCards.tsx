@@ -245,10 +245,10 @@ export const ProductCards = () => {
             </div>
           </div>
           <Link
-            href="/company"
+            href="/product"
             className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-200 shadow-md"
           >
-            Learn more
+            {t('products.learnMore')}
           </Link>
         </div>
 
